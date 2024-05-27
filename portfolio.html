@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PortFolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio Developer" />
+    <meta name="author" content="Team BitMarket Developer: Claudia Premoselli - Francesco Esposito - Giuseppe Giordano - Francesco Donato - Simone Dervasi" />
+    <meta name="keywords" content="porfolio, link, repository, progetti" />
+    <link rel="icon" type="image/x-icon" href="img/shop.ico">
+
+    <style>
+        /*navbar*/
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+            .navbar li {
+                margin-left: 1em;
+            }
+
+            .navbar a {
+                text-decoration: none;
+                color: white;
+                font-size: 1.2em;
+                transition: color 0.3s ease;
+            }
+
+                .navbar a:hover {
+                    background: #D4ADFC;
+                    border-radius: 5px;
+                }
+
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+        }
+
+            .hamburger-menu i {
+                font-size: 1.5em;
+            }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                margin-top: 1em;
+            }
+
+                .navbar.open {
+                    display: flex;
+                }
+
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        /*header*/
+
+        header {
+            background-color: #0C134F;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0.5em 0;
+            }
+
+            header p {
+                margin: 0;
+            }
+
+        /*footer*/
+        footer {
+            background-color: #0C134F;
+            color: white;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1em;
+            font-size: 20px;
+        }
+
+            .social-icons a:hover {
+                color: #D4ADFC;
+            }
+
+        .contact-info p {
+            margin: 0.5em 0;
+        }
+
+        .contact-info i {
+            margin-right: 0.5em;
+        }
+
+        #containerFooter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            margin-left: 6%;
+            margin-right: 6%;
+        }
+        #containerNav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+        }
+
+
+        
+        body {
+            background: #1D267D;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            font-size:40px;
+            margin-left:5%;
+        }
+
+        #immGitHub {
+            width: 50%;
+            border-radius: 20%;
+            background: #fff;
+        }
+
+        .immagine {
+            margin-top: 80%;
+        }
+
+        #immLibr {
+            border-radius: 50%;
+            width: 55%;
+            height: 155px;
+        }
+
+        #contPrimo {
+            background: #0C134F;
+            border-radius: 15px;
+            color: white;
+            box-shadow: -2px 1px 14px 3px #0C134F;
+            border: 2px solid #D4ADFC;
+        }
+
+        #contTuttoGitHub {
+            background: #0C134F;
+            border-radius: 15px;
+            color: white;
+            box-shadow: -2px 1px 14px 3px #0C134F;
+            border: 2px solid #D4ADFC;
+        }
+
+        #contDescrizione {
+            background: #0C134F;
+            border-radius: 15px;
+            color: white;
+            box-shadow: -2px 1px 14px 3px #0C134F;
+            border: 2px solid #D4ADFC;
+        }
+
+        .listaGitHub {
+            background: #0C134F;
+            color: white;
+            border: 2px solid #D4ADFC;
+        }
+
+        #visitaRep {
+            text-decoration: none;
+            color: #D4ADFC;
+        }
+
+            #visitaRep:hover {
+                background: #5C469C;
+                border-radius: 5px;
+                margin-left: 30%;
+                margin-right: 30%;
+            }
+           .listaTec{
+               font-size: 20px;
+           }
+
+        @media screen and (max-width: 1000px) {
+            .immagine {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--HEADER-->
+    <header>
+        <nav class="navbar-container">
+            <div class="container" id="containerNav">
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="guidaUtente.html">Guida Utente</a></li>
+                    <li><a href="paginaProgetto.html">Info BitMarket</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container1">
+            <h1><strong>BitMarket</strong></h1>
+        </div>
+        <p>Il modo più semplice e veloce per gestire le offerte del tuo supermercato</p>
+    </header>
+
+
+
+
+
+    <!--main-->
+    <main class="main">
+        <div class="container mt-5">
+
+            <!-- bg-primary-subtle text-primary-emphasis shadow-lg p-3 mb-3 bg-body-tertiary rounded-->
+            <!--primo contenitore con descrizione delle tecnologie usate-->
+            <div class="row ">
+                <div id="contPrimo" class="col-lg-12 col-md-12 col-sm-12 p-3 mb-3">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-dash-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5M6 6a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z" />
+                        </svg>
+                        <h2 class="text-center">Tecnologie Usate</h2>
+
+                    </div>
+                    <div class="p-5">
+                        <h5 class="text-center">Le tecnologie usate per la creazione del sito web sono:</h5>
+                        <hr />
+                        <ul class="listaTec">
+                            <li class="list-group-item text-center">HTML</li>
+                            <li class="list-group-item text-center">CSS - Bootstrap v5.3</li>
+                            <li class="list-group-item text-center">Javascript</li>
+                        </ul>
+                        <hr />
+                        <h5 class="text-center">Le tecnologie usate per il gestionale:</h5>
+                        <hr />
+                        <ul class="listaTec">
+
+                            <li class="list-group-item text-center">Java</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--descrizione GITHUB -->
+            <div class="row">
+                <div id="contTuttoGitHub" class="col-lg-12 col-md-12 col-sm-12 p-3 mb-3">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-dash-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5M6 6a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z" />
+                        </svg>
+                        <h2 class="text-center">GitHub</h2>
+                    </div>
+                    <div class="row">
+
+                        <div id="contGitHub" class="col-lg-9 col-md-12 col-sm-12 p-3 mb-3">
+
+                            <div class="list-group p-5">
+                                <h5 class="text-center">Elenco dei progretti recenti realizzati:</h5>
+                                <hr />
+
+                                <a href="https://github.com/FrancescooEspositoo/LibreriaJava" class="listaGitHub list-group-item list-group-item-action">
+                                    Libreria Elettronica (REPOSITORY)
+                                    <p>Gestionale di una libreria elettronica dove potrai effettuare varie opzioni</p>
+                                </a>
+                                <hr />
+                                <a href="#" class="listaGitHub list-group-item list-group-item-action">
+                                    Math (REPOSITORY)
+                                    <p>Sito Web per gestire aiutare i bambini delle elmentari con le operazione e tanto altro</p>
+                                </a>
+                                <hr />
+                                <a href="https://github.com/FrancescooEspositoo/calcolatrice" class="listaGitHub list-group-item list-group-item-action">
+                                    Calcolatrice (REPOSITORY)
+                                    <p>Sito Web per gestire le varie funzione di una Calcolatrice</p>
+                                </a>
+                                <hr />
+                                <a href="https://github.com/FrancescooEspositoo/asiloNido" class="listaGitHub list-group-item list-group-item-action">
+                                    Asilo Nido (REPOSITORY)
+                                    <p>Sito Web per gestire le varie funzioni di un Asilo Nido</p>
+                                </a>
+                                <hr />
+                                <a id="visitaRep" href="https://github.com/FrancescooEspositoo?tab=repositories">
+                                    <h6 class="text-center">Visita la mia repository completa di GitHub</h6>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div id="contImmGitHub" class="col-lg-3 col-md-12 col-sm-12 p-3 mb-3">
+
+                            <div class="immagine text-center">
+                                <a href="https://github.com/FrancescooEspositoo?tab=repositories">
+                                    <img src="img/gitHub.png" alt="immagine" id="immGitHub" />
+                                </a>
+                            </div>
+                            <div class="text-center mt-3">
+                                <h6>GitHub</h6>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--div per la descrizione dell'esperienza personale-->
+            <div class="row">
+                <div id="contDescrizione" class="col-lg-12 col-md-12 col-sm-12 p-3 mb-3">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-dash-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5M6 6a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z" />
+                        </svg>
+                        <h2 class="text-center">Esperienza Professionale</h2>
+                    </div>
+                    <div class="p-5">
+                        <hr />
+                        <h5>Corso Sviluppatore Java</h5>
+                        <p> <em>Aprile 2024 - Presente</em></p>
+                        <hr />
+                        <ul>
+                            <li class="list-group-item">Concetti base di Informatica</li>
+                            <li class="list-group-item">HTML - CSS - BOOTSTRAP</li>
+                            <li class="list-group-item">Javascript</li>
+                            <li class="list-group-item">Java Base</li>
+                            <li class="list-group-item">Java Avanzato</li>
+                            <li class="list-group-item">MySQL e Database</li>
+                        </ul>
+                        <hr />
+                        <p>Durante queste esperienze, ho sviluppato una solida competenza tecnica e una forte attitudine al lavoro di squadra, sempre con l'obiettivo di offrire soluzioni software innovative e di alta qualità.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <div id="containerFooter" class="containerFooter">
+           
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Via del Supermercato, 123 - 00100, Città</p>
+                    <p><i class="fas fa-envelope"></i> info@supermercato.com</p>
+                    <p><i class="fas fa-phone"></i> +39 0123 456789</p>
+                </div>
+            </div>
+        
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navbar = document.querySelector('.navbar');
+
+            hamburgerMenu.addEventListener('click', function () {
+                navbar.classList.toggle('open');
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Contatti</title>
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/shop.ico">
+    <style>
+        /*navbar*/
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+            .navbar li {
+                margin-left: 1em;
+            }
+
+            .navbar a {
+                text-decoration: none;
+                color: white;
+                font-size: 1.2em;
+                transition: color 0.3s ease;
+            }
+
+                .navbar a:hover {
+                    background: #D4ADFC;
+                    border-radius: 5px;
+                }
+
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+        }
+
+            .hamburger-menu i {
+                font-size: 1.5em;
+            }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                margin-top: 1em;
+            }
+
+                .navbar.open {
+                    display: flex;
+                }
+
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        #containerFooter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            margin-left: 6%;
+            margin-right: 6%;
+        }
+        #containerNav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+        }
+
+        /*header*/
+
+        header {
+            background-color: #0C134F;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0.5em 0;
+            }
+
+            header p {
+                margin: 0;
+            }
+
+
+        /*footer*/
+
+        footer {
+            background-color: #0C134F;
+            color: white;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1em;
+            font-size: 20px;
+        }
+
+            .social-icons a:hover {
+                color: #4CAF50;
+            }
+
+        .contact-info p {
+            margin: 0.5em 0;
+        }
+
+        .contact-info i {
+            margin-right: 0.5em;
+        }
+
+
+
+
+        /*.containerFooter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+        }*/
+
+        .logo {
+            height: 40px;
+            width: 40px;
+        }
+
+
+        body {
+            color: azure;
+            background-color: #1D267D;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenitore1 {
+            background-color: #0C134F;
+            border-radius: 25px;
+        }
+
+        .contenitoreBordi {
+            border: solid 2px;
+            border-radius: 10px;
+            border-color: #D4ADFC;
+            color: azure;
+            padding: 10px;
+        }
+
+        .card {
+            color: azure;
+            background-color: rgba(212, 173, 252, 0.2);
+            padding: 10px;
+            border-radius: 48px 0;
+        }
+
+        h1 {
+            color: #D4ADFC;
+            text-decoration: #D4ADFC;
+        }
+
+
+        .bottone {
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #5C469C;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+            .bottone:hover {
+                background-color: #D4ADFC;
+            }
+
+
+        img {
+            width: 70px;
+            height: 60px;
+        }
+
+        .iconeCard {
+            text-align: center;
+        }
+    </style>
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar-container">
+            <div class="container" id="containerNav">
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="guidaUtente.html">Guida Utente</a></li>
+                    <li><a href="portfolio.html">Portofolio</a></li>
+                    <li><a href="paginaProgetto.html">Info BitMarket</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container1">
+            <h1><strong>BitMarket</strong></h1>
+        </div>
+        <p>Il modo più semplice e veloce per gestire le offerte del tuo supermercato</p>
+    </header>
+
+
+
+    <section class="mt-5">
+        <div class="contenitore py-5 ">
+            <div class="container">
+                <div class="d-flex">
+                    <h1>Contatta il nostro TEAM
+                        <i class="bi bi-rocket-takeoff"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" fill="currentColor" class="bi bi-rocket-takeoff" viewBox="0 0 16 16">
+                            <path d="M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532" />
+                            <path d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z" />
+                            <path d="M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z" />
+                        </svg>
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="container p-4 text-center mb-5 contenitore1">
+        <div class="row gx-5 p-3">
+            <div class="col-lg-4 col-md-6 col-sm-6 ">
+                <div class="p-3 ">
+                    <div class="card mb-3">
+                        <div class="iconeCard">
+                            <div class="iconeCard">
+                                <i class="bi bi-person-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Giuseppe Giordano</h5>
+                            
+                            <p class="card-text">E-mail: <br /> giordano816@gmail.com</p>
+                            
+                            <p>
+                                <span> <a href="https://www.linkedin.com/in/giuseppe-giordano-77aa1b1b5"><img class="logo" src="img/linkedinIcon.png" /></a></span>
+                                <span> <a href="https://github.com/Peppino89"><img class="logo" src="img/gitHub.png" /></a></span>
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="iconeCard">
+                            <i class="bi bi-person-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                </svg>
+                            </i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Francesco Esposito</h5>
+                            <p class="card-text">E-mail: <br /> esposito.francesco0709@gmail.com</p>
+                            <p>
+                                <span> <a href="https://www.linkedin.com/in/francesco-esposito-069194212/"><img class="logo" src="img/linkedinIcon.png" /></a></span>
+                                <span> <a href="https://github.com/FrancescooEspositoo"><img class="logo" src="img/gitHub.png" /></a></span>
+                            </p>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="iconeCard">
+                            <i class="bi bi-person-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                </svg>
+                            </i>
+                        </div>
+                            <div class="card-body ">
+                                <h5 class="card-title">Simone Dervasi</h5>
+                                <p class="card-text">E-mail: <br /> simonedervasi@gmail.com </p>
+                                <p>
+                                    <span> <a href="https://www.linkedin.com/in/simone-dervasi-100282139/"><img class="logo" src="img/linkedinIcon.png" /></a></span>
+                                    <span> <a href="https://github.com/SimoneeD23"><img class="logo" src="img/gitHub.png" /></a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="p-3">
+                    <div class="card mb-3">
+                        <div class="iconeCard">
+                            <i class="bi bi-person-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                </svg>
+                            </i>
+                        </div>
+                            <div class="card-body ">
+                                <h5 class="card-title">Claudia Premoselli</h5>
+                                <p class="card-text">E-mail: <br /> claudia.premoselli@hotmail.com.</p>
+                                <p>
+                                    <span> <a href="https://www.linkedin.com/in/claudia-premoselli-4037b1208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img class="logo" src="img/linkedinIcon.png" /></a></span>
+                                    <span> <a href="https://github.com/ClaudiaPremoselli97"><img class="logo" src="img/gitHub.png" /></a></span>
+                                </p>
+
+                            </div>
+                        </div>
+                    <div class="card mb-4">
+                        
+                        <div class="iconeCard">
+                            <i class="bi bi-person-circle"> <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                 </svg>   </i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Francesco Donato</h5>
+                            <p class="card-text">E-mail: <br /> francescodonato370@gmail.com</p>
+                            <p>
+                                <span> <a href="https://www.linkedin.com/in/francesco-donato-a412512a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img class="logo" src="img/linkedinIcon.png" /></a></span>
+                                <span> <a href="https://github.com/fd010897"><img class="logo" src="img/gitHub.png" /></a></span>
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 contenitoreBordi p-3">
+                <div class="p-3">
+                   <p><i class="bi bi-envelope"></i>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="80" height="70" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                           <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                       </svg>
+                       </p> 
+                    <h2 class=" pb-4 titoloForm">Invia un messaggio <br /> <span class="lead">Per supporto ed informazioni con esitare a contattarci.</span></h2>
+
+                    <div class="row g-4">
+                        <div class="col-6 mb-3">
+                            <label for="nome" class="form-label fw-bold titolo">Nome</label>
+                            <input type="text" class="form-control form" id="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="Cognome" class="form-label fw-bold titolo">Cognome</label>
+                            <input type="text" class="form-control " id="cognome" placeholder="Cognome" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold titolo">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label fw-bold titolo">Telefono</label>
+                        <input type="text" class="form-control" id="telefono" placeholder="Numero di telefono" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="selezione" class="form-label fw-bold titolo">Manda messaggio a:</label>
+                        <select id="sviluppatore" class="form-select sviluppatore" aria-label="Default select example">
+                            <option>Seleziona uno sviluppatore</option>
+                            <option>Giuseppe Giordano</option>
+                            <option>Francesco Esposito</option>
+                            <option>Simone Dervasi</option>
+                            <option>Claudia Premoselli</option>
+                            <option>Francesco Donato</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label for="messaggio" class="form-label fw-bold titolo">Messaggio</label>
+                        <textarea class="form-control" id="text" rows="3"></textarea>
+                    </div>
+                    <button class="btn bottone" type="button" onclick="inviaMessaggio()">Invia messaggio</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <footer>
+        <div class="containerFooter " id="containerFooter">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Via del Supermercato, 123 - 00100, Città</p>
+                <p><i class="fas fa-envelope"></i> info@supermercato.com</p>
+                <p><i class="fas fa-phone"></i> +39 0123 456789</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+
+        function inviaMessaggio() {
+            var nome = document.getElementById("nome").value;
+            var cognome = document.getElementById("cognome").value;
+            var email = document.getElementById("email").value;
+            var telefono = document.getElementById("telefono").value;
+            var text = document.getElementById("text").value;
+            var sviluppatore = document.getElementById("sviluppatore").value;
+
+            if (sviluppatore !== "Seleziona uno sviluppatore" && nome && cognome && email && telefono && text) {
+                alert("Hai mandato il tuo messaggio a " + sviluppatore + " con successo!");
+
+
+            } else {
+                alert("Attenzione, seleziona tutti i campi per poter procedere all'invio.");
+            }
+
+        }
+    
+
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navbar = document.querySelector('.navbar');
+
+            hamburgerMenu.addEventListener('click', function () {
+                navbar.classList.toggle('open');
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+     

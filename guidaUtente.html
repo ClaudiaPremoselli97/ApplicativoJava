@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Guida Utente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta name="author" content="Team BitMarket Developer: Claudia Premoselli - Francesco Esposito - Giuseppe Giordano - Francesco Donato - Simone Dervasi" />
+    <meta name="keywords" content="guida, utente, progetto" />
+    <link rel="icon" type="image/x-icon" href="img/shop.ico">
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1D267D;
+            color: #333;
+        }
+
+        h1 {
+            color: #D4ADFC;
+        }
+        /*navbar*/
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+            .navbar li {
+                margin-left: 1em;
+            }
+
+            .navbar a {
+                text-decoration: none;
+                color: white;
+                font-size: 1.2em;
+                transition: color 0.3s ease;
+            }
+
+                .navbar a:hover {
+                    background: #D4ADFC;
+                    border-radius: 5px;
+                }
+
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            /*background-color: white;*/
+            color: white;
+        }
+
+            .hamburger-menu i {
+                font-size: 1.5em;
+            }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                margin-top: 1em;
+            }
+
+                .navbar.open {
+                    display: flex;
+                }
+
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        /*header*/
+
+        header {
+            background-color: #0C134F;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0.5em 0;
+            }
+
+            header p {
+                margin: 0;
+            }
+
+
+        main {
+            padding: 2em;
+        }
+
+        #istruzioni, #risoluzione-problemi {
+            margin-bottom: 2em;
+        }
+
+            #istruzioni h2, #risoluzione-problemi h2 {
+                text-align: center;
+                color: white;
+                margin-bottom: 1em;
+            }
+
+            #istruzioni ol, #risoluzione-problemi dl {
+                color: white;
+            }
+
+            #istruzioni img {
+                margin-top: 1em;
+                margin-bottom: 1em;
+                border: 2px solid #D4ADFC;
+                border-radius: 8px;
+            }
+
+        .suggerimenti li {
+            color: white;
+        }
+
+        .suggerimenti {
+            background: #0C134F;
+            padding: 2%;
+            border: 2px solid #D4ADFC;
+            border-radius: 5px;
+            margin-bottom: 2%;
+            box-shadow: -2px 1px 14px 3px #0C134F;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+        }
+
+
+        footer {
+            background-color: #0C134F;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1em;
+            font-size: 24px;
+        }
+
+            .social-icons a:hover {
+                color: #D4ADFC;
+            }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+            .contact-info p {
+                display: flex;
+                align-items: center;
+                margin: 0.5em 0;
+            }
+
+        .contact-info i {
+            margin-right: 0.5em;
+        }
+
+
+        p {
+            color: white;
+        }
+        .contact-info{
+            
+
+        }
+
+        #containterIstruzioni {
+            background: #0C134F;
+            padding: 2%;
+            border: 2px solid #D4ADFC;
+            border-radius: 5px;
+            margin-bottom: 2%;
+            box-shadow: -2px 1px 14px 3px #0C134F;
+        }
+
+        .immaginiD {
+            width: 70%;
+            height: 50%;
+        }
+
+        #clickBi {
+            text-decoration: none;
+            color: white;
+        }
+
+            #clickBi:hover {
+                background: #D4ADFC;
+                border-radius: 5px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar-container">
+            <div class="container">
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="paginaProgetto.html">Info BitMarket</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container1">
+            <h1><strong>BitMarket</strong></h1>
+        </div>
+        <p>Il modo più semplice e veloce per gestire le offerte del tuo supermercato</p>
+    </header>
+    
+    <main>
+        <div>
+            <p style="color:white">
+                Per poter utilizzare il nostro applicativo devi aver già installato il pacchetto Java sul tuo computer,
+                se non lo hai già installato  <a id="clickBi" href="https://www.java.com/it/">CLICCA QUI</a>
+            </p>
+        </div>
+
+        <section id="istruzioni">
+            <h2>Istruzioni per l'Utilizzo</h2>
+            <p>Questa sezione fornisce una guida dettagliata su come avviare il programma. Seguire i passaggi seguenti:</p>
+            <div id="containterIstruzioni" class="col-lg-12 col-md-12 col-sm-12">
+                <ol>
+                    <li>
+                        <strong>Scarica il programma:</strong> <br>
+                        Sulla nostra pagina Prodotto potrai cliccare su questo pulsante e scaricare il programma <br />
+                        <img src="img/pulsanteDownload.png" alt="immagine">
+
+                    </li>
+
+                    <li>
+                        <strong>Aprire Sezione Download:</strong> <br>
+                        Una volta cliccato Vai sulla sezione Download del tuo Browser e clicca sulla cartellina per visuallizzare il file Scaricato<br />
+                        <img src="img/downloadImm.png" alt="Aggiungere un nuovo prodotto" class="immaginiD">
+
+                    </li>
+                    <li>
+                        <strong>Crea una cartella nel tuo disco C: </strong> <br>
+                        Crea una cartella nel tuo disco C: con il nome "Supermercato" e poi inseriamo il nostro file Jar scaricato in precedenza<br />
+                        <img src="img/questoPc.png" alt="Creare una nuova offerta" class="immaginiD"><br>
+                    </li>
+                    <li>
+                        <strong>Eseguiamo il nostro programma</strong> <br>
+                        Andiamo sulla nostra barra di ricerca e scriviamo "PROMT DEI COMANDI" e eseguiamo<br />
+                        <img src="img/prompt.png" alt="Ricerca Offerta" class="immaginiD"><br>
+
+                    </li>
+                    <li>
+                        <strong>Entriamo nel nostro Disco C:</strong> <br>
+                        Adesso andiamo a scrivere gli stessi comandi dell'immagine qui sotto per entrare all'interno della nostra cartella "Supermercato"<br />
+                        <img src="img/promptCd.png" alt="Ricerca Offerta" class="immaginiD"><br>
+                    </li>
+                    <li>
+                        <strong>Comando per eseguire il programma</strong> <br>
+                        Adesso usiamo il comando "java -jar BitMarket.jar" per poter eseguire il nostro programma<br />
+                        <img src="img/promptCdJava.png" alt="Ricerca Offerta" class="immaginiD"> <br />
+                    </li>
+                </ol>
+            </div>
+            <div class="suggerimenti">
+                <p>Suggerimenti Utili:</p>
+                <ul>
+                    <li>Assicurarsi di aver scaricato correttamente il file Java sul tuo computer.</li>
+                    <li>Assicurarsi di seguire correttamente tutti i passaggi qui sopra elencati. </li>
+                    <li>Assicurarsi di seguire attentamente i passaggi dal punto 5, e eseguire correttamente i comandi elencati.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Via del Supermercato, 123 - 00100, Città</p>
+                <p><i class="fas fa-envelope"></i> info@supermercato.com</p>
+                <p><i class="fas fa-phone"></i> +39 0123 456789</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navbar = document.querySelector('.navbar');
+
+            hamburgerMenu.addEventListener('click', function () {
+                navbar.classList.toggle('open');
+            });
+        });</script>
+
+</body>
+</html>

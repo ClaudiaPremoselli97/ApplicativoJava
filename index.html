@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestore Offerte Supermercato</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="img/shop.ico">
+    <style>
+        body {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#1D267D;
+            color: #333;
+        }
+
+        /*navbar*/
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+            .navbar li {
+                margin-left: 1em;
+            }
+
+            .navbar a {
+                text-decoration: none;
+                color: white;
+                font-size: 1.2em;
+                transition: color 0.3s ease;
+            }
+
+                .navbar a:hover {
+                    background: #D4ADFC;
+                    border-radius: 5px;
+                }
+
+        .hamburger-menu {
+            display: none; 
+            cursor: pointer;
+        }
+
+            .hamburger-menu i {
+                font-size: 1.5em;
+            }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .navbar {
+                display: none; 
+                flex-direction: column;
+                margin-top: 1em;
+            }
+
+                .navbar.open {
+                    display: flex; 
+                }
+
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+            }
+
+               
+        }
+
+        /*header*/
+
+        header {
+            background-color: #0C134F;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0.5em 0;
+                color: #D4ADFC;
+            }
+
+            header p {
+                margin: 0;
+            }
+
+            /*main*/
+
+        main {
+            padding: 2em;
+        }
+
+        #descrizione {
+            margin-bottom: 2em;
+            text-align: center;
+        }
+
+            #descrizione h2, #funzionalita h2 {
+                text-align: center;
+                color:white;
+                margin-bottom: 1em;
+            }
+
+            /*card funzionalità*/
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        .card {
+            background: #0C134F;
+            border: 2px solid #D4ADFC;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2em;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.2s;
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+            .card i {
+                color:white;
+                margin-bottom: 1em;
+            }
+
+            .card h3 {
+                margin: 1em 0 0.5em;
+                color: white;
+            }
+
+       
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1em 0;
+            }
+
+                header h1 {
+                    font-size: 1.5em;
+                }
+
+                header p {
+                    font-size: 1em;
+                }
+
+            main {
+                padding: 1em;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+        }
+
+        /*bottoni*/
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin: 2em 0;
+        }
+
+            .buttons button {
+                padding: 0.5em 1em;
+                border: none;
+                border-radius: 5px;
+                background-color: #5C469C;
+                color: white;
+                font-size: 1em;
+                cursor: pointer;
+            }
+
+                .buttons button:hover {
+                    background-color: #D4ADFC;
+                }
+
+         /*footer*/ 
+
+        footer {
+            background-color: #0C134F;
+            color: white;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1em;
+            font-size: 20px;
+        }
+
+            .social-icons a:hover {
+                background: #D4ADFC;
+                
+            }
+
+        .contact-info p {
+            margin: 0.5em 0;
+        }
+
+        .contact-info i {
+            margin-right: 0.5em;
+        }
+
+        p {
+            color: white;
+        }
+        .bottoniIper{
+            text-decoration:none;
+            color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-container">
+            <div class="container">
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <li><a href="guidaUtente.html">Guida Utente</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="paginaProgetto.html">Info BitMarket</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container1">
+            <h1><strong>BitMarket</strong></h1>
+        </div>
+        <p>Il modo più semplice e veloce per gestire le offerte del tuo supermercato</p>
+    </header>
+
+    <main>
+        <section id="descrizione">
+            <h2>Descrizione del Sito</h2>
+            <p>Il nostro gestionale ti permette di monitorare e gestire in modo efficiente le offerte e i prodotti del tuo supermercato. Con un'interfaccia intuitiva e funzionalità avanzate, puoi risparmiare tempo e aumentare la produttività.</p>
+        </section>
+        <section id="funzionalita">
+            <h2>Funzionalità</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-box-open fa-3x"></i>
+                    <h3>Gestione Prodotti</h3>
+                    <p>Aggiungi, modifica e rimuovi i prodotti facilmente.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-tags fa-3x"></i>
+                    <h3>Gestione Offerte</h3>
+                    <p>Crea e gestisci offerte promozionali per attirare più clienti.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-search fa-3x"></i>
+                    <h3>Ricerca Offerte</h3>
+                    <p>Trova rapidamente le offerte desiderate con il nostro sistema di ricerca avanzato.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user-shield fa-3x"></i>
+                    <h3>Sicurezza</h3>
+                    <p>Proteggi i dati del tuo supermercato con avanzati sistemi di sicurezza.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="buttons">
+        <button id="downloadButton">
+            <a class="bottoniIper" href="img/BitMarket.jar" download="img/BitMarket.jar">
+                Scarica Codice
+            </a>
+        </button>
+
+        
+            <button id="continueButton">
+            <a class="bottoniIper" href="paginaProgetto.html">Continua a Navigare
+            </a>
+            </button>
+            
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Via del Supermercato, 123 - 00100, Città</p>
+                <p><i class="fas fa-envelope"></i> info@supermercato.com</p>
+                <p><i class="fas fa-phone"></i> +39 0123 456789</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navbar = document.querySelector('.navbar');
+
+    hamburgerMenu.addEventListener('click', function () {
+        navbar.classList.toggle('open');
+    });
+});
+    </script>
+
+</body>
+</html>
